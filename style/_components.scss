@@ -1,0 +1,247 @@
+// style for listitem component
+#list-items-component {
+  background: white;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  ul {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    li {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      flex: 1.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      .wrap-bg {
+        position: absolute;
+        /* z-index: 1; */
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+
+          z-index: 2;
+        }
+        img {
+          width: 100%;
+
+          z-index: 1;
+        }
+      }
+      .wrap-content {
+        position: absolute;
+        /* z-index: 1; */
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          z-index: 2;
+          font-size: 2.3rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: $dorado;
+          font-family: "trajanpro-regular";
+          @include tablet-s-invert {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      &.par {
+        .wrap-bg {
+          .bg {
+            background-color: rgba(0, 0, 0, 0.75);
+          }
+        }
+      }
+      &.impar {
+        .wrap-bg {
+          .bg {
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+//style for header section
+nav.HeaderNav {
+  position: relative;
+  width: 100%;
+  height: $headerMin;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 10;
+
+  @include tablet {
+    height: $headerMax;
+  }
+  .HeaderNav-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+  .HeaderNav-icon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: $headerMin;
+      @include tablet {
+        height: $headerMax - 20px;
+      }
+    }
+  }
+  .HeaderNav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    &.burger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      box-sizing: border-box;
+      .square {
+        width: 80%;
+        flex: 1;
+        margin-top: 4px;
+        margin-bottom: 4px;
+      }
+    }
+    &.triangle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+      .square {
+        width: 70%;
+        flex: 1;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        @include tablet {
+          width: 80%;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+        &.item1 {
+          transform: rotate(-50deg);
+        }
+        &.item2 {
+          transform: rotate(50deg);
+        }
+      }
+    }
+  }
+}
+// style for itemdescription component
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //background section
+  &-img {
+    overflow: hidden;
+    img {
+      position: relative;
+      width: 100%;
+    }
+  }
+  &-description {
+    overflow: auto;
+    width: 96%;
+    @include tablet {
+      width: 80%;
+    }
+    &-title {
+      text-align: left;
+      color: $dorado;
+      font-family: "trajanpro-regular";
+      font-size: 2.2rem;
+      font-weight: 400;
+      @include tablet {
+        font-size: 2.7rem;
+      }
+    }
+    &-text {
+      color: $gris-texto;
+      font-family: "open-sans-regular";
+      font-weight: 500;
+      &-phone {
+        text-align: center;
+        color: $dorado;
+        font-family: "trajanpro-regular";
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+      &-btns {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        @include tablet {
+          flex-direction: row;
+          margin-top: 30px;
+        }
+        .btn {
+          height: 50px;
+          flex: 1;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include tablet-max {
+            margin: 10px 0px;
+          }
+          a {
+            background-color: $dorado;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
