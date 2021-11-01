@@ -1,7 +1,7 @@
 {
   "name": "AppResidences",
   "version": "1.0.0",
-  "description": " React and Babel support",
+  "description": "Grand Residences Web App",
   "main": "index.js",
   "repository": "",
   "scripts": {

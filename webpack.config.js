@@ -29,6 +29,7 @@ module.exports = {
     royal_care_standard: "./src/pages/royal_care_standard.js",
     kids_club: "./src/pages/kids_club.js",
     golf: "./src/pages/golf.js",
+    kinoko: "./src/pages/kinoko.js",
   },
   output: {
     path: "./build/",
